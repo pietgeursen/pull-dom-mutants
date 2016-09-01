@@ -1,15 +1,25 @@
 {
-	"name": "pull-dom-mutants",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"dependencies": {
-		"pull-pushable": "*"
-	}
+  "name": "pull-dom-mutants",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "browserify ./test/index.js | smokestack | tap-spec",
+		"test:debug":"budo ./test/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "global": "^4.3.0",
+    "pull-stream": "^3.4.4",
+    "pull-pushable": "^2.0.1"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "budo": "^9.0.0",
+    "smokestack": "^3.4.1",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.0"
+  }
 }
