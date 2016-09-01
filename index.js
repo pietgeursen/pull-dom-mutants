@@ -1,7 +1,6 @@
 var Push = require('pull-pushable')
 var pull = require('pull-stream')
 var window = require('global/window')
-var document = require('global/document')
 
 module.exports = function (node, opts) {
   var _opts = Object.assign({childList: true}, opts)
