@@ -3,20 +3,19 @@ var pull = require('pull-stream')
 var test = require('tape')
 
 test('emitter emits a value when child element appended', function (t) {
-  const elem = document.createElement('main')
-  const child = document.createElement('h1')
+  var elem = document.createElement('main')
+  var child = document.createElement('h1')
   pull(
     pullMutant(elem, {childList: true}),
     pull.take(1),
     pull.drain(function (mutation) {
-      t.ok(mutation)
-      var target = mutation.target
-      addedChild = target.querySelector('h1')
-      t.deepEqual(addedChild, child)
+      var addedChild = mutation.target.querySelector('h1')
+      t.equal(addedChild, child)
       t.end()
       window.close()
     })
   )
 
+  t.false(elem.querySelector('h1'))
   elem.appendChild(child)
 })
