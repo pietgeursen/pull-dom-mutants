@@ -3,7 +3,7 @@
 
 
 ## Example
-```
+```js
 var pull = require('pull-stream')
 
 var elem = document.createElement('main')
@@ -21,7 +21,7 @@ elem.appendChild(child) // Emits a new mutation.
 ```
 ## API
 
-```
+```js
   var pullMutants = require('pull-dom-mutants')
   pullMutants(elem [, opts])
 ```
