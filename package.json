@@ -1,15 +1,23 @@
 {
   "name": "pull-dom-mutants",
   "version": "1.0.1",
-  "description": "",
+  "description": "pull-stream source of dom element mutations using Mutation Observer",
   "main": "index.js",
   "scripts": {
     "test": "browserify ./test/index.js | tape-run | tap-spec",
     "test:debug": "budo ./test/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pietgeursen/pull-dom-mutants.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pietgeursen/pull-dom-mutants/issues"
+  },
+  "homepage": "https://github.com/pietgeursen/pull-dom-mutants#readme",
   "dependencies": {
     "global": "^4.3.0",
     "pull-stream": "^3.4.4",
